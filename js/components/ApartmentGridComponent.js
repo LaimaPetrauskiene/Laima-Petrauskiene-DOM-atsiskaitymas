@@ -53,7 +53,7 @@ class ApartmentGridComponent {
         } else if (apartments.length > 0) {
             this.htmlElement.innerHTML = ``;
             const apartmentsElements = apartments
-                .map(x => new ApartmentsCardComponent(x))
+                .map(x => new ApartmentCardComponent(x))
                 .map(x => x.htmlElement)
                 .map(this.wrapInColumn);
             this.htmlElement.append(...apartmentsElements);
