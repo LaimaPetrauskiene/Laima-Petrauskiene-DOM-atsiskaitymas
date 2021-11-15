@@ -33,16 +33,32 @@ class ApartmentGridComponent {
     saveApartments = (apartments) => {
         this.state.apartments = apartments;
         this.state.loading = false;
-
+        this.htmlElement.className = 'row g-3'
         this.render();
     }
 
+    wrapInColumn = (element) => {
+        const column = document.createElement('div');
+        column.className = 'col-xs-12 col-sm-6 col-lg-4 col-xl-3';
+        column.appendChild(element);
+        return column;
+
+    }
+
+
     render = () => {
-        const { loading } = this.state;
+        const { loading, apartments } = this.state;
         if (loading) {
-            this.htmlElement.innerHTML = `Siunčiama`;
+            this.htmlElement.innerHTML = `<div class="text-center"><img src="assets/loading.gif"/></div>`;
+        } else if (apartments.length > 0) {
+            this.htmlElement.innerHTML = ``;
+            const apartmentsElements = apartments
+                .map(x => new ApartmentsCardComponent(x))
+                .map(x => x.htmlElement)
+                .map(this.wrapInColumn);
+            this.htmlElement.append(...apartmentsElements);
         } else {
-            this.htmlElement.innerHTML = `Parsiųsta!`;
+            this.htmlElement.innerHTML = 'Šiuo metu būstų nėra';
         }
     }
 }
