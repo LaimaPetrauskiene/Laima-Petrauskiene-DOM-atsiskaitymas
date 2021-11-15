@@ -30,7 +30,7 @@ class ApartmentCardComponent {
             <li>email:<strong> ${email}</strong></li>
             <li>phone:<strong> ${phone}</strong></li>
             <hr>
-            <li>${street} ${number}, ${city}, ${country}</li>    
+            <li>${street}-${number}, ${city}, ${country}</li>    
         </ul>
        
         <h3 class="text-success">price: ${formatedPrice}</h3>
