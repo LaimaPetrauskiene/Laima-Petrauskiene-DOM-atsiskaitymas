@@ -1,0 +1,23 @@
+{
+  "name": "laima-petrauskiene-dom-atsiskaitymas",
+  "version": "1.0.0",
+  "description": "CAFE DOM atsiskaitymas",
+  "main": "index.js",
+  "scripts": {
+    "start-unix": "node_modules/.bin/json-server --watch database.json",
+    "start-win": "node_modules\\.bin\\json-server --watch database.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaimaPetrauskiene/Laima-Petrauskiene-DOM-atsiskaitymas.git"
+  },
+  "author": "Laima Petrauskiene",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaimaPetrauskiene/Laima-Petrauskiene-DOM-atsiskaitymas/issues"
+  },
+  "homepage": "https://github.com/LaimaPetrauskiene/Laima-Petrauskiene-DOM-atsiskaitymas#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
